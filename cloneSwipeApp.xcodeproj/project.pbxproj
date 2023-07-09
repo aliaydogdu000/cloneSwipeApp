@@ -14,6 +14,7 @@
 		F42CBC9D2A583B2900FC5212 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F42CBC9B2A583B2900FC5212 /* LaunchScreen.storyboard */; };
 		F42CBCA52A583B5200FC5212 /* Extensions+UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F42CBCA42A583B5200FC5212 /* Extensions+UIView.swift */; };
 		F42CBCAA2A583B9500FC5212 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F42CBCA92A583B9500FC5212 /* ViewController.swift */; };
+		F471AC552A5B49D600A54482 /* TopNavigationStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F471AC542A5B49D600A54482 /* TopNavigationStackView.swift */; };
 		F4A7C1872A5B0E9A00B2BA9A /* HomeBottomControlsStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4A7C1862A5B0E9A00B2BA9A /* HomeBottomControlsStackView.swift */; };
 /* End PBXBuildFile section */
 
@@ -27,6 +28,7 @@
 		F42CBC9E2A583B2900FC5212 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F42CBCA42A583B5200FC5212 /* Extensions+UIView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Extensions+UIView.swift"; sourceTree = "<group>"; };
 		F42CBCA92A583B9500FC5212 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		F471AC542A5B49D600A54482 /* TopNavigationStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopNavigationStackView.swift; sourceTree = "<group>"; };
 		F4A7C1862A5B0E9A00B2BA9A /* HomeBottomControlsStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeBottomControlsStackView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -85,6 +87,7 @@
 			isa = PBXGroup;
 			children = (
 				F4A7C1862A5B0E9A00B2BA9A /* HomeBottomControlsStackView.swift */,
+				F471AC542A5B49D600A54482 /* TopNavigationStackView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -163,6 +166,7 @@
 				F42CBC912A583B2800FC5212 /* AppDelegate.swift in Sources */,
 				F42CBCA52A583B5200FC5212 /* Extensions+UIView.swift in Sources */,
 				F4A7C1872A5B0E9A00B2BA9A /* HomeBottomControlsStackView.swift in Sources */,
+				F471AC552A5B49D600A54482 /* TopNavigationStackView.swift in Sources */,
 				F42CBCAA2A583B9500FC5212 /* ViewController.swift in Sources */,
 				F42CBC932A583B2800FC5212 /* SceneDelegate.swift in Sources */,
 			);
