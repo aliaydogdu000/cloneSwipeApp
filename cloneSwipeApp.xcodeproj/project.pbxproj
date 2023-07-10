@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F41AA24B2A5CA73800C3E0CA /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F41AA24A2A5CA73800C3E0CA /* CardView.swift */; };
 		F42CBC912A583B2800FC5212 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F42CBC902A583B2800FC5212 /* AppDelegate.swift */; };
 		F42CBC932A583B2800FC5212 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F42CBC922A583B2800FC5212 /* SceneDelegate.swift */; };
 		F42CBC982A583B2800FC5212 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F42CBC962A583B2800FC5212 /* Main.storyboard */; };
@@ -19,6 +20,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F41AA24A2A5CA73800C3E0CA /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		F42CBC8D2A583B2800FC5212 /* cloneSwipeApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = cloneSwipeApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F42CBC902A583B2800FC5212 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F42CBC922A583B2800FC5212 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -88,6 +90,7 @@
 			children = (
 				F4A7C1862A5B0E9A00B2BA9A /* HomeBottomControlsStackView.swift */,
 				F471AC542A5B49D600A54482 /* TopNavigationStackView.swift */,
+				F41AA24A2A5CA73800C3E0CA /* CardView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -163,6 +166,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F41AA24B2A5CA73800C3E0CA /* CardView.swift in Sources */,
 				F42CBC912A583B2800FC5212 /* AppDelegate.swift in Sources */,
 				F42CBCA52A583B5200FC5212 /* Extensions+UIView.swift in Sources */,
 				F4A7C1872A5B0E9A00B2BA9A /* HomeBottomControlsStackView.swift in Sources */,
