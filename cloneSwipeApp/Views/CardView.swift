@@ -10,6 +10,9 @@ import UIKit
 class CardView: UIView {
     
     fileprivate let imageView = UIImageView(image: UIImage(named: "lady5c"))
+    //configurations
+    fileprivate let treshold:CGFloat = 100
+
 
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -22,26 +25,45 @@ class CardView: UIView {
         addGestureRecognizer(panGesture)
     }
     
-    fileprivate func handleEnded() {
+    fileprivate func handleChanged(gesture: UIPanGestureRecognizer) {
+        let translation = gesture.translation(in: nil)
+        //rotation
+        let degrees:CGFloat = translation.x / 20
+        let angle = degrees * .pi / 180
+        
+        let rotationalTransformation = CGAffineTransform(rotationAngle: angle)
+        self.transform = rotationalTransformation.translatedBy(x: translation.x, y: translation.y)
+        
+        
+    }
+    
+    fileprivate func handleEnded(gesture: UIPanGestureRecognizer) {
+        
+        let shouldDismissCard = gesture.translation(in: nil).x > treshold
+        
         UIView.animate(withDuration: 0.75, delay: 0, usingSpringWithDamping: 0.6, initialSpringVelocity: 0.1,options: .curveEaseOut,animations: {
-            self.transform = .identity
-        }) { (_) in
             
+            if shouldDismissCard{
+                let offScreenTransform = self.transform.translatedBy(x: 1000, y: 0)
+                self.transform = offScreenTransform
+            }else{
+                self.transform = .identity
+            }
+        }) { (_) in
+            self.transform = .identity
+            self.frame = CGRect(x: 0, y: 0, width: self.superview!.frame.width, height: self.superview!.frame.height)
+
         }
     }
     
-    fileprivate func handleChanged(_ gesture: UIPanGestureRecognizer) {
-        let translation = gesture.translation(in: nil)
-        self.transform = CGAffineTransform(translationX: translation.x, y: translation.y)
-    }
     
     @objc fileprivate func handlePan(gesture:UIPanGestureRecognizer){
         
         switch gesture.state {
         case .changed:
-            handleChanged(gesture)
+            handleChanged(gesture: gesture)
         case .ended:
-            handleEnded()
+            handleEnded(gesture: gesture)
         default:
             ()
         }
