@@ -14,9 +14,10 @@
 		F42CBC9A2A583B2900FC5212 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F42CBC992A583B2900FC5212 /* Assets.xcassets */; };
 		F42CBC9D2A583B2900FC5212 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F42CBC9B2A583B2900FC5212 /* LaunchScreen.storyboard */; };
 		F42CBCA52A583B5200FC5212 /* Extensions+UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F42CBCA42A583B5200FC5212 /* Extensions+UIView.swift */; };
-		F42CBCAA2A583B9500FC5212 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F42CBCA92A583B9500FC5212 /* ViewController.swift */; };
+		F42CBCAA2A583B9500FC5212 /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F42CBCA92A583B9500FC5212 /* HomeController.swift */; };
 		F471AC552A5B49D600A54482 /* TopNavigationStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F471AC542A5B49D600A54482 /* TopNavigationStackView.swift */; };
 		F4A7C1872A5B0E9A00B2BA9A /* HomeBottomControlsStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4A7C1862A5B0E9A00B2BA9A /* HomeBottomControlsStackView.swift */; };
+		F4ABBE1F2A5DFCAD00BA4406 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4ABBE1E2A5DFCAC00BA4406 /* User.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,9 +30,10 @@
 		F42CBC9C2A583B2900FC5212 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F42CBC9E2A583B2900FC5212 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F42CBCA42A583B5200FC5212 /* Extensions+UIView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Extensions+UIView.swift"; sourceTree = "<group>"; };
-		F42CBCA92A583B9500FC5212 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		F42CBCA92A583B9500FC5212 /* HomeController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeController.swift; sourceTree = "<group>"; };
 		F471AC542A5B49D600A54482 /* TopNavigationStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopNavigationStackView.swift; sourceTree = "<group>"; };
 		F4A7C1862A5B0E9A00B2BA9A /* HomeBottomControlsStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeBottomControlsStackView.swift; sourceTree = "<group>"; };
+		F4ABBE1E2A5DFCAC00BA4406 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,10 +66,11 @@
 		F42CBC8F2A583B2800FC5212 /* cloneSwipeApp */ = {
 			isa = PBXGroup;
 			children = (
+				F4ABBE1D2A5DFC9800BA4406 /* Model */,
 				F4A7C1852A5B0E4300B2BA9A /* Views */,
 				F42CBCA62A583B5700FC5212 /* Extensions */,
 				F42CBC902A583B2800FC5212 /* AppDelegate.swift */,
-				F42CBCA92A583B9500FC5212 /* ViewController.swift */,
+				F42CBCA92A583B9500FC5212 /* HomeController.swift */,
 				F42CBC922A583B2800FC5212 /* SceneDelegate.swift */,
 				F42CBC962A583B2800FC5212 /* Main.storyboard */,
 				F42CBC992A583B2900FC5212 /* Assets.xcassets */,
@@ -93,6 +96,14 @@
 				F41AA24A2A5CA73800C3E0CA /* CardView.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		F4ABBE1D2A5DFC9800BA4406 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				F4ABBE1E2A5DFCAC00BA4406 /* User.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -170,8 +181,9 @@
 				F42CBC912A583B2800FC5212 /* AppDelegate.swift in Sources */,
 				F42CBCA52A583B5200FC5212 /* Extensions+UIView.swift in Sources */,
 				F4A7C1872A5B0E9A00B2BA9A /* HomeBottomControlsStackView.swift in Sources */,
+				F4ABBE1F2A5DFCAD00BA4406 /* User.swift in Sources */,
 				F471AC552A5B49D600A54482 /* TopNavigationStackView.swift in Sources */,
-				F42CBCAA2A583B9500FC5212 /* ViewController.swift in Sources */,
+				F42CBCAA2A583B9500FC5212 /* HomeController.swift in Sources */,
 				F42CBC932A583B2800FC5212 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
