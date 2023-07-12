@@ -18,6 +18,7 @@
 		F471AC552A5B49D600A54482 /* TopNavigationStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F471AC542A5B49D600A54482 /* TopNavigationStackView.swift */; };
 		F4A7C1872A5B0E9A00B2BA9A /* HomeBottomControlsStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4A7C1862A5B0E9A00B2BA9A /* HomeBottomControlsStackView.swift */; };
 		F4ABBE1F2A5DFCAD00BA4406 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4ABBE1E2A5DFCAC00BA4406 /* User.swift */; };
+		F4C2CFC42A5EE15400268FE9 /* CardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4C2CFC32A5EE15400268FE9 /* CardViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		F471AC542A5B49D600A54482 /* TopNavigationStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopNavigationStackView.swift; sourceTree = "<group>"; };
 		F4A7C1862A5B0E9A00B2BA9A /* HomeBottomControlsStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeBottomControlsStackView.swift; sourceTree = "<group>"; };
 		F4ABBE1E2A5DFCAC00BA4406 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		F4C2CFC32A5EE15400268FE9 /* CardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +68,7 @@
 		F42CBC8F2A583B2800FC5212 /* cloneSwipeApp */ = {
 			isa = PBXGroup;
 			children = (
+				F4C2CFC22A5EE13600268FE9 /* ViewModels */,
 				F4ABBE1D2A5DFC9800BA4406 /* Model */,
 				F4A7C1852A5B0E4300B2BA9A /* Views */,
 				F42CBCA62A583B5700FC5212 /* Extensions */,
@@ -104,6 +107,14 @@
 				F4ABBE1E2A5DFCAC00BA4406 /* User.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		F4C2CFC22A5EE13600268FE9 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				F4C2CFC32A5EE15400268FE9 /* CardViewModel.swift */,
+			);
+			path = ViewModels;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -185,6 +196,7 @@
 				F471AC552A5B49D600A54482 /* TopNavigationStackView.swift in Sources */,
 				F42CBCAA2A583B9500FC5212 /* HomeController.swift in Sources */,
 				F42CBC932A583B2800FC5212 /* SceneDelegate.swift in Sources */,
+				F4C2CFC42A5EE15400268FE9 /* CardViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
