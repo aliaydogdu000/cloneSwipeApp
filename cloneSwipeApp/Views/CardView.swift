@@ -18,13 +18,20 @@ class CardView: UIView {
     }
     
     fileprivate let imageView = UIImageView(image: UIImage(named: "lady5c"))
+    fileprivate let gradientLayer = CAGradientLayer()
     fileprivate let informationLabel = UILabel()
     //configurations
     fileprivate let treshold:CGFloat = 100
 
-
     override init(frame: CGRect) {
         super.init(frame: frame)
+        setUpLayout()
+        
+        let panGesture = UIPanGestureRecognizer(target: self, action: #selector(handlePan))
+        addGestureRecognizer(panGesture)
+    }
+    
+    fileprivate func setUpLayout() {
         layer.cornerRadius = 10
         clipsToBounds = true
         
@@ -32,16 +39,41 @@ class CardView: UIView {
         addSubview(imageView)
         imageView.fillSuperview()
         
+        setUpGradientLayer()
+        
         addSubview(informationLabel)
         informationLabel.anchor(top: nil, leading: leadingAnchor, bottom: bottomAnchor, trailing: trailingAnchor,padding: .init(top: 0, left: 16, bottom: 16, right: 16))
         
-        informationLabel.text = "TEST TEST"
         informationLabel.textColor = .white
-        informationLabel.font = UIFont.systemFont(ofSize: 34,weight: .heavy)
         informationLabel.numberOfLines = 0
+    }
+
+    
+    fileprivate func setUpGradientLayer(){
+        gradientLayer.colors = [UIColor.clear.cgColor,UIColor.black.cgColor]
+        gradientLayer.locations = [0.5,1]
         
-        let panGesture = UIPanGestureRecognizer(target: self, action: #selector(handlePan))
-        addGestureRecognizer(panGesture)
+        layer.addSublayer(gradientLayer)
+    }
+    
+    override func layoutSubviews() {
+        gradientLayer.frame = self.frame
+    }
+    
+    @objc fileprivate func handlePan(gesture:UIPanGestureRecognizer){
+        
+        switch gesture.state {
+        case .began:
+            superview?.subviews.forEach({ (subviews) in
+                subviews.layer.removeAllAnimations()
+            })
+        case .changed:
+            handleChanged(gesture: gesture)
+        case .ended:
+            handleEnded(gesture: gesture)
+        default:
+            ()
+        }
     }
     
     fileprivate func handleChanged(gesture: UIPanGestureRecognizer) {
@@ -57,38 +89,25 @@ class CardView: UIView {
     }
     
     fileprivate func handleEnded(gesture: UIPanGestureRecognizer) {
-        let transationDirection:CGFloat =  gesture.translation(in: nil).x > 0 ? 1 : -1
+        let translationDirection: CGFloat = gesture.translation(in: nil).x > 0 ? 1 : -1
         let shouldDismissCard = abs(gesture.translation(in: nil).x) > treshold
         
-        UIView.animate(withDuration: 1, delay: 0, usingSpringWithDamping: 0.6, initialSpringVelocity: 0.1,options: .curveEaseOut,animations: {
-            
-            if shouldDismissCard{
-                self.frame = CGRect(x: 600 * transationDirection, y: 0, width: self.frame.width, height: self.frame.height)
-            }else{
+        UIView.animate(withDuration: 1, delay: 0, usingSpringWithDamping: 0.6, initialSpringVelocity: 0.1, options: .curveEaseOut, animations: {
+            if shouldDismissCard {
+                self.frame = CGRect(x: 600 * translationDirection, y: 0, width: self.frame.width, height: self.frame.height)
+            } else {
                 self.transform = .identity
             }
+            
         }) { (_) in
             self.transform = .identity
-            if shouldDismissCard{
+            if shouldDismissCard {
                 self.removeFromSuperview()
             }
-
-        }
+}
     }
     
-    
-    @objc fileprivate func handlePan(gesture:UIPanGestureRecognizer){
-        
-        switch gesture.state {
-        case .changed:
-            handleChanged(gesture: gesture)
-        case .ended:
-            handleEnded(gesture: gesture)
-        default:
-            ()
-        }
-    }
-    
+   
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
