@@ -18,6 +18,7 @@
 		F471AC552A5B49D600A54482 /* TopNavigationStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F471AC542A5B49D600A54482 /* TopNavigationStackView.swift */; };
 		F4A7C1872A5B0E9A00B2BA9A /* HomeBottomControlsStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4A7C1862A5B0E9A00B2BA9A /* HomeBottomControlsStackView.swift */; };
 		F4ABBE1F2A5DFCAD00BA4406 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4ABBE1E2A5DFCAC00BA4406 /* User.swift */; };
+		F4C1E0B62A6018E900E86DF8 /* Advertiser.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4C1E0B52A6018E900E86DF8 /* Advertiser.swift */; };
 		F4C2CFC42A5EE15400268FE9 /* CardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4C2CFC32A5EE15400268FE9 /* CardViewModel.swift */; };
 /* End PBXBuildFile section */
 
@@ -35,6 +36,7 @@
 		F471AC542A5B49D600A54482 /* TopNavigationStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopNavigationStackView.swift; sourceTree = "<group>"; };
 		F4A7C1862A5B0E9A00B2BA9A /* HomeBottomControlsStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeBottomControlsStackView.swift; sourceTree = "<group>"; };
 		F4ABBE1E2A5DFCAC00BA4406 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		F4C1E0B52A6018E900E86DF8 /* Advertiser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Advertiser.swift; sourceTree = "<group>"; };
 		F4C2CFC32A5EE15400268FE9 /* CardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -105,6 +107,7 @@
 			isa = PBXGroup;
 			children = (
 				F4ABBE1E2A5DFCAC00BA4406 /* User.swift */,
+				F4C1E0B52A6018E900E86DF8 /* Advertiser.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -188,6 +191,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F4C1E0B62A6018E900E86DF8 /* Advertiser.swift in Sources */,
 				F41AA24B2A5CA73800C3E0CA /* CardView.swift in Sources */,
 				F42CBC912A583B2800FC5212 /* AppDelegate.swift in Sources */,
 				F42CBCA52A583B5200FC5212 /* Extensions+UIView.swift in Sources */,
