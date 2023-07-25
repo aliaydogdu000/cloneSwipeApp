@@ -29,7 +29,7 @@ class CardView: UIView {
     
     fileprivate func setupImageIndexObserver(){
         cardViewModel.imageIndexObserver = { [weak self] (index,image) in
-            self?imageView.image = image
+            self?.imageView.image = image
             
             self?.barsStackView.arrangedSubviews.forEach ({ (v) in
                 v.backgroundColor = self?.barDeselectColor
